@@ -2,11 +2,11 @@ import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className ='navbar'>
-        <h1>React Blog</h1>
-        <div className='links'>
-            <Link to="/">Home</Link>
-            <Link to="/create">Create Blog</Link>
+    <nav>
+        <h1 class= "ui huge blue header">React Blog</h1>
+        <div className='ui menu'>
+            <Link class="item" to="/">Home</Link>
+            <Link class="item" to="/create">Create Blog</Link>
         </div>
     </nav>
   )
