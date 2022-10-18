@@ -40,9 +40,9 @@ const Create = () => {
         />
         <label>Blog author:</label>
         <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-          <option value="Benjamin">Benjamin</option>
-          <option value="Charles">Charles</option>
-          <option value="Dean">Dean</option>
+          <option value="Benjamin">Benjamin Dean</option>
+
+          <option value="Random Person">Random Person</option>
         </select>
         {<button class= 'ui primary button'>Add Blog</button>}
       </form>
