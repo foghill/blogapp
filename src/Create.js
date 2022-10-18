@@ -22,7 +22,7 @@ const Create = () => {
   };
 
   return (
-    <div className="create">
+    <div className="ui form">
       <h2>Add a New Blog</h2>
       <form onSubmit={handleSubmit}>
         <label>Blog Title</label>
@@ -44,7 +44,7 @@ const Create = () => {
           <option value="Charles">Charles</option>
           <option value="Dean">Dean</option>
         </select>
-        {<button>Add Blog</button>}
+        {<button class= 'ui primary button'>Add Blog</button>}
       </form>
     </div>
   );
