@@ -5,7 +5,7 @@ import BlogList from "./BlogList";
 
 function App() {
   return <div>
-   <BlogList /> 
+    <p>hi</p>
   </div>;
 }
 

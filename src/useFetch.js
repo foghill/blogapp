@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const API = "http://localhost:8000/blogs";
+const API = "http://localhost:8000/blogs/";
 
 const useFetch = () => {
   const [data, setData] = useState([]);
