@@ -1,10 +1,10 @@
-import { Button } from "semantic-ui-react";
-import FormExampleCaptureValues from "./FormExampleCaptureValues";
+
 import "./App.css";
+import React from "react";
 
 function App() {
   return <div>
-   <FormExampleCaptureValues />
+   <h2>hi</h2>  
   </div>;
 }
 
