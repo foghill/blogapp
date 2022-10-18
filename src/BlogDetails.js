@@ -17,7 +17,7 @@ const BlogDetails = () => {
 
 
   return (
-    <div className="blog-details">
+    <div class="ui text container">
       <article>
         <h2>{blog.title}</h2>
         <p>Written by {blog.author}</p>
