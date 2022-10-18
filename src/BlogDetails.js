@@ -22,7 +22,7 @@ const BlogDetails = () => {
         <h2>{blog.title}</h2>
         <p>Written by {blog.author}</p>
         <p>{blog.body}</p>
-        <button onClick={handleClick}>Delete</button>
+        <button onClick={handleClick} class='ui red basic button'>Delete</button>
       </article>
     </div>
   );
