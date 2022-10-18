@@ -22,7 +22,7 @@ const Create = () => {
   };
 
   return (
-    <div className="ui form">
+    <div className="ui form container">
       <h2>Add a New Blog</h2>
       <form onSubmit={handleSubmit}>
         <label>Blog Title</label>
