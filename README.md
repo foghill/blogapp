@@ -34,8 +34,3 @@ The npm package [JSON Server](https://www.npmjs.com/package/json-server) is used
 
 the npm package [React Router v6](https://www.npmjs.com/package/react-router-dom) is used for the client-side routes
 
-## Deployment
-
-This page was deployed using Netlify, the link is here:
-
-[Ben's React Project](https://lucent-medovik-389fea.netlify.app)
