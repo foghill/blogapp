@@ -4,6 +4,7 @@ import Create from "./Create";
 import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
 import Cat from './Cat.js'
+import Counter from './Counter.js'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/blogs/:id" element={<BlogDetails />} />
             <Route path="*" element={<NotFound />} />
             <Route path="cat" element={<Cat />} />
+            <Route path="counter" element={<Counter />} />
           </Routes>
         </div>
       </div>
