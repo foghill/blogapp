@@ -31,6 +31,7 @@ const Cat = () => {
           Generate !
         </button>
       </div>
+      
     </>
   );
 };

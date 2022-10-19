@@ -1,13 +1,29 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { Message } from "semantic-ui-react";
 
-const NotFound = () => {
-  return (
-    <div className="not-found">
-      <h2>404 Error</h2>
-      <p>We cannot find that page!</p>
-      <Link to="/">Take me back to Home</Link>
-    </div>
-  );
-};
+const MessageExampleNegative = () => (
+  <>
+  <p></p>
+  <div class="ui container positive message ">
+    <i class="close icon"></i>
+    <div class="header">This is a beautiful 404 page</div>
+    <p>We welcome you to it</p>
+  </div>
+  <Message
+  class="ui container negative message "
+    error
+    header='There was some errors with your submission'
+    list={[
+      'You must include both a upper and lower case letters in your password.',
+      'You need to select your home country.',
+    ]}
+  />
+  <i class="ae flag"></i>
+<i class="france flag"></i>
+<i class="myanmar flag"></i>
 
-export default NotFound;
+  
+  </>
+);
+
+export default MessageExampleNegative;

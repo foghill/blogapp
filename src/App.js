@@ -21,6 +21,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="cat" element={<Cat />} />
             <Route path="counter" element={<Counter />} />
+            <Route path="404" element={<NotFound />} />
           </Routes>
         </div>
       </div>
