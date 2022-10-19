@@ -9,8 +9,8 @@ const MessageExampleNegative = () => (
     <div class="header">This is a beautiful 404 page</div>
     <p>We welcome you to it</p>
   </div>
+  <div class="ui container negative message ">
   <Message
-  class="ui container negative message "
     error
     header='There was some errors with your submission'
     list={[
@@ -18,6 +18,7 @@ const MessageExampleNegative = () => (
       'You need to select your home country.',
     ]}
   />
+  </div>
   <i class="ae flag"></i>
 <i class="france flag"></i>
 <i class="myanmar flag"></i>
