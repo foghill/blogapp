@@ -1,15 +1,13 @@
-import React from "react";
-import BlogList from "./BlogList";
-import useFetch from "./useFetch";
+import React from 'react'
+import BlogList from './BlogList.js'
 
-
-const Home = () => {
-  const { data: blogs } = useFetch("http://localhost:8000/blogs");
+const Home = ({blogs}) => {
   return (
     <div className="ui center aligned container">
-      <BlogList blogs={blogs} title={"All Blogs"} />
+        <p></p>
+        <BlogList blogs={blogs} title={"All Blogs"} />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

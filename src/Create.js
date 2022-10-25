@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Create = () => {
+const Create = ({ onAddBlog }) => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("Ben");
@@ -12,13 +12,17 @@ const Create = () => {
     e.preventDefault();
     const blog = { title, body, author };
 
-    fetch("http://localhost:8000/blogs", {
+    fetch(`http://localhost:8000/blogs`+blog.id, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blog),
-    }).then(() => {
-      navigate("/");
-    });
+    })
+      .then(() => {
+        onAddBlog(blog);
+      })
+      .then(() => {
+        navigate("/");
+      });
   };
 
   return (
@@ -44,7 +48,7 @@ const Create = () => {
 
           <option value="Random Person">Random Person</option>
         </select>
-        {<button class= 'ui primary button'>Add Blog</button>}
+        {<button class="ui primary button">Add Blog</button>}
       </form>
     </div>
   );

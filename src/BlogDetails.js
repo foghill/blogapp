@@ -1,20 +1,21 @@
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import useFetch from "./useFetch";
-import React from "react";
 
-const BlogDetails = () => {
+const BlogDetails = ({onDeleteBlog}) => {
   const { id } = useParams();
   const { data: blog } = useFetch("http://localhost:8000/blogs/"+ id);
   const navigate = useNavigate();
 
-  const handleClick = () => {
+   const handleDelete = () => {
     fetch(`http://localhost:8000/blogs/`+ blog.id, {
       method: "DELETE",
     }).then(() => {
+      onDeleteBlog(blog)
+    }).then(() => {
       navigate("/");
-    });
+    });;
   };
-
 
   return (
     <div class="ui text container">
@@ -22,7 +23,7 @@ const BlogDetails = () => {
         <h2>{blog.title}</h2>
         <p>Written by {blog.author}</p>
         <p>{blog.body}</p>
-        <button onClick={handleClick} class='ui red basic button'>Delete</button>
+        <button onClick={handleDelete} class='ui red basic button'>Delete</button>
       </article>
     </div>
   );
