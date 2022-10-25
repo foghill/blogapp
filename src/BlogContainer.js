@@ -1,5 +1,5 @@
 import React from "react";
-import BlogCard from "./BlogDetails";
+import BlogCard from "./BlogCard";
 
 const BlogContainer = ({ blogs, onDeleteBlog, onAddBlog }) => {
   const blogItems = blogs.map((blog) => (

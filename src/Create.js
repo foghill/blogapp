@@ -3,26 +3,33 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Create = ({ onAddBlog }) => {
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  const [author, setAuthor] = useState("Ben");
   const navigate = useNavigate();
+  const [blogObj, setBlogObj] = useState({
+    title: "",
+    body: "",
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const blog = { title, body, author };
-
-    fetch(`http://localhost:8000/blogs`+blog.id, {
+    fetch(`http://localhost:8000/blogs/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(blog),
+      body: JSON.stringify(blogObj),
     })
       .then(() => {
-        onAddBlog(blog);
+        onAddBlog(blogObj);
       })
       .then(() => {
         navigate("/");
       });
+  };
+
+  const onChangeHandler = (e) => {
+    setBlogObj({
+      ...blogObj,
+      [e.target.name]: e.target.value,
+    });
+    console.log(blogObj);
   };
 
   return (
@@ -31,19 +38,22 @@ const Create = ({ onAddBlog }) => {
       <form onSubmit={handleSubmit}>
         <label>Blog Title</label>
         <input
+          onChange={onChangeHandler}
           type="text"
+          name="title"
           required
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          value={blogObj.title}
+          
         />
         <label>Blog Body:</label>
         <textarea
-          required
-          value={body}
-          onChange={(e) => setBody(e.target.value)}
+          name="body"
+          type="text"
+          value={blogObj.body}
+          onChange={onChangeHandler}
         />
         <label>Blog author:</label>
-        <select value={author} onChange={(e) => setAuthor(e.target.value)}>
+        <select value={blogObj.author} onChange={onChangeHandler}>
           <option value="Benjamin">Benjamin Dean</option>
 
           <option value="Random Person">Random Person</option>

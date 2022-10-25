@@ -31,22 +31,22 @@
       "id": 5
     },
     {
-      "title": "hi",
-      "body": "hu",
-      "author": "Ben",
+      "title": "asdasd",
+      "body": "",
+      "blog": "d",
+      "id": 6
+    },
+    {
+      "title": "asd",
+      "body": "",
+      "": "Random Person",
+      "blog": "s",
       "id": 7
     },
     {
-      "title": "hi does this work",
-      "body": "hiii",
-      "author": "Ben",
+      "title": "asd",
+      "body": "asd",
       "id": 8
-    },
-    {
-      "title": "hi does this ",
-      "body": "oasfad",
-      "author": "Ben",
-      "id": 9
     }
   ]
 }
