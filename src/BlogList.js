@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const BlogList = ({ blogs,title }) => {
+const BlogList = ({ blogs}) => {
   return (
     <div class="ui centered card">
       <div class="content">
@@ -12,11 +12,6 @@ const BlogList = ({ blogs,title }) => {
             </Link>
           </div>
         ))}
-        <div class="header">{blogs.title}</div>
-      </div>
-      <div class="content">
-        <h4 class="ui sub header">{blogs.author}</h4>
-        <div class="extra content" />
       </div>
     </div>
   );

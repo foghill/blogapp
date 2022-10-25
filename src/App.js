@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Create from "./Create";
-import BlogCard from "./BlogDetails";
+import BlogCard from "./BlogCard";
 import BlogContainer from "./BlogContainer";
 import BlogList from "./BlogList";
 import Home from "./Home";
