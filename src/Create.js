@@ -7,6 +7,7 @@ const Create = ({ onAddBlog }) => {
   const [blogObj, setBlogObj] = useState({
     title: "",
     body: "",
+    author:""
   });
 
   const handleSubmit = (e) => {
@@ -53,11 +54,12 @@ const Create = ({ onAddBlog }) => {
           onChange={onChangeHandler}
         />
         <label>Blog author:</label>
-        <select value={blogObj.author} onChange={onChangeHandler}>
-          <option value="Benjamin">Benjamin Dean</option>
-
-          <option value="Random Person">Random Person</option>
-        </select>
+        <input
+          name="author"
+          type="text"
+          value={blogObj.author}
+          onChange={onChangeHandler}
+        />
         {<button class="ui primary button">Add Blog</button>}
       </form>
     </div>

@@ -1,13 +1,12 @@
 import React from "react";
-import BlogCard from "./BlogCard";
+import BlogDetails from "./BlogDetails";
 
-const BlogContainer = ({ blogs, onDeleteBlog, onAddBlog }) => {
+const BlogContainer = ({ blogs, handleDeleteBlog,}) => {
   const blogItems = blogs.map((blog) => (
-    <BlogCard
+    <BlogDetails
       key={blog.id}
       blog={blog}
-      onAddBlog={onAddBlog}
-      onDeleteBlog={onDeleteBlog}
+      handleDeleteBlog={handleDeleteBlog}
     />
   ));
   return <div>{blogItems}</div>;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Create from "./Create";
-import BlogCard from "./BlogCard";
+import BlogCard from "./BlogDetails";
 import BlogContainer from "./BlogContainer";
 import BlogList from "./BlogList";
 import Home from "./Home";
@@ -41,12 +41,13 @@ function App() {
                 <BlogContainer
                   blogs={blogs}
                   onAddBlog={handleAddBlog}
+                  handleDeleteBlog={handleDeleteBlog}
                 />
               }
             />
             <Route path="/create" element={<Create onAddBlog={handleAddBlog} blogs={blogs}/>} />
-            <Route path="/bloglist" element={<BlogList blogs={blogs} />} />
-            <Route path="/blogs/:id" element={<BlogCard onDeleteBlog={handleDeleteBlog}/>} />
+            <Route path="/bloglist" element={<BlogList />} />
+            <Route path="/blogs/:id" element={<BlogCard blogs={blogs}  handleDeleteBlog={handleDeleteBlog}/>} />
             <Route path="*" element={<NotFound />} />
             <Route path="cat" element={<Cat />} />
             <Route path="counter" element={<Counter />} />
