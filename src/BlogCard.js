@@ -3,8 +3,11 @@ import { useParams, useNavigate } from 'react-router-dom';
 import useFetch from './useFetch';
 
 const BlogCard = ({handleDeleteBlog }) => {
+  //this components gets called using a Link passing in the URl. the blog's id is in the URL as a parameter.
   const { id } = useParams();
+  //extract id
     const { data: blog} =  useFetch('http://localhost:8000/blogs/' + id);
+    //get blog by pass in the id to the useFetch hook
   const navigate = useNavigate();
 
   const handleDelete = () => {
