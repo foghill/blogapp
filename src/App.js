@@ -4,7 +4,6 @@ import Create from "./Create";
 import BlogCard from "./BlogCard";
 import BlogContainer from "./BlogContainer";
 import BlogList from "./BlogList";
-import Home from "./Home";
 import NotFound from "./NotFound";
 import Cat from "./Cat.js";
 import Counter from "./Counter.js";
@@ -34,24 +33,21 @@ function App() {
         <Navbar />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home blogs={blogs} />} />
+            <Route path="/" element={<BlogList blogs={blogs} />} />
             <Route
-              path="/blogcontainer"
+              path="/create"
+              element={<Create onAddBlog={handleAddBlog} blogs={blogs} />}
+            />
+            <Route path="/bloglist" element={<BlogList />} />
+            <Route
+              path="/blogs/:id"
               element={
-                <BlogContainer
-                  blogs={blogs}
-                  onAddBlog={handleAddBlog}
-                  handleDeleteBlog={handleDeleteBlog}
-                />
+                <BlogCard blogs={blogs} handleDeleteBlog={handleDeleteBlog} />
               }
             />
-            <Route path="/create" element={<Create onAddBlog={handleAddBlog} blogs={blogs}/>} />
-            <Route path="/bloglist" element={<BlogList />} />
-            <Route path="/blogs/:id" element={<BlogCard blogs={blogs}  handleDeleteBlog={handleDeleteBlog}/>} />
             <Route path="*" element={<NotFound />} />
             <Route path="cat" element={<Cat />} />
             <Route path="counter" element={<Counter />} />
-            <Route path="404" element={<NotFound />} />
           </Routes>
         </div>
       </div>

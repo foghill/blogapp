@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const BlogList = ({ blogs,title}) => {
+const BlogList = ({ blogs}) => {
   return (
     <div class="ui centered card">
-      <h2>{title}</h2>
+      <h2>All Blogs</h2>
       <div class="content">
         {blogs.map((blog) => (
           <div className="item" key={blog.id}>

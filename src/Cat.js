@@ -1,24 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 const Cat = () => {
   const [url, setUrl] = useState("");
 
-  function fetch_data() {
+  const fetch_data = () => {
     fetch("https://api.thecatapi.com/v1/images/search")
-      .then(
-        (res) => {
-          if (res.ok) {
-            return res.json();
-          }
-          throw new Error("Request Failed");
-        },
-        (networkError) => console.log(networkError.message)
-      )
+      .then((r) => r.json())
       .then((jsonRes) => {
         setUrl(jsonRes[0].url);
       });
-  }
+  };
+  console.log(url)
 
   return (
     <>
@@ -31,7 +24,6 @@ const Cat = () => {
           Generate !
         </button>
       </div>
-      
     </>
   );
 };
