@@ -15,7 +15,8 @@
 1. **App.js** - the main component, which uses BrowserRouter to link all the pages, give them paths, and load components to that page
 2. **Home.js** - the homepage for the blog which shows all the blogs in a list format. It calls the BlogList component and passes in the blogs to that component to displau the blogs. The Home component fetches the blogs with a useFetch custom hook
 3. **BlogList.js** - It receives the blogs from the Home component and displays them
-4. **BlogDetails.js** - This component fetches a single blog and displays it on a separate page
+4. **BlogCard.js** - This component fetches a single blog and displays it on a separate page
+ **BlogContainer.js** - This component maps blog items and returns the BlogCard component
 5. **Create.js** - This is where new blogs are created and adds them to the previous blogs list. This component includes a form controlled component
 6. **Navbar.js** - This displays the navbar on each page
 7. **NotFound.js** - This page loads if the user lands on a page that doesn't exist. It's the 404 page
