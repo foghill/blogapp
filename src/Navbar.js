@@ -7,8 +7,8 @@ const Navbar = () => {
         <div className='ui menu'>
             <Link className="item" to="/">Home</Link>
             <Link className="item" to="/create">Create Blog</Link>
-            <Link className="item" to="/cat">Cat</Link>
-            <Link className="item" to="/counter">Counter</Link>
+            {/* <Link className="item" to="/cat">Cat</Link>
+            <Link className="item" to="/counter">Counter</Link> */}
         </div>
     </nav>
   )

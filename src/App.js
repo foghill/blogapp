@@ -26,6 +26,8 @@ function App() {
     setBlogs(updatedBlogs);
   }
 
+  console.log(blogs)
+
   return (
     <Router>
       <div className="App">
@@ -37,7 +39,6 @@ function App() {
               path="/create"
               element={<Create onAddBlog={handleAddBlog} blogs={blogs} />}
             />
-            <Route path="/bloglist" element={<BlogList />} />
             <Route
               path="/blogs/:id"
               element={
@@ -45,8 +46,8 @@ function App() {
               }
             />
             <Route path="*" element={<NotFound />} />
-            <Route path="cat" element={<Cat />} />
-            <Route path="counter" element={<Counter />} />
+            {/* <Route path="cat" element={<Cat />} />
+            <Route path="counter" element={<Counter />} /> */}
           </Routes>
         </div>
       </div>
