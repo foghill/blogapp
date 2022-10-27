@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Create from "./Create";
 import BlogCard from "./BlogCard";
-import BlogContainer from "./BlogContainer";
 import BlogList from "./BlogList";
 import NotFound from "./NotFound";
 import Cat from "./Cat.js";

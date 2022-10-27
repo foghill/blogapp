@@ -35,6 +35,12 @@
       "body": "my sixth blog ☺️",
       "author": "Ben ",
       "id": 6
+    },
+    {
+      "title": "7th blog",
+      "body": "seventh blog",
+      "author": "mark dean",
+      "id": 7
     }
   ]
 }

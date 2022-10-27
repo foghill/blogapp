@@ -17,14 +17,14 @@ const Counter = () => {
   };
 
   return (
-   <div class='ui center aligned container'>
+   <div className='ui center aligned container'>
       <h1>React Counter</h1>
-      <span class='ui active button'>{counter}</span>
+      <span className='ui active button'>{counter}</span>
       <div>
         <p></p>
-        <button class="ui green basic button" onClick={increase}>+</button>
-        <button class="ui red basic button" onClick={decrease}>-</button>
-        <button class="ui pink basic button" onClick={reset}>Reset</button>
+        <button className="ui green basic button" onClick={increase}>+</button>
+        <button className="ui red basic button" onClick={decrease}>-</button>
+        <button className="ui pink basic button" onClick={reset}>Reset</button>
       </div>
     </div>
   );

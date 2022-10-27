@@ -60,7 +60,7 @@ const Create = ({ onAddBlog }) => {
           value={blogObj.author}
           onChange={onChangeHandler}
         />
-        {<button class="ui primary button">Add Blog</button>}
+        {<button className="ui primary button">Add Blog</button>}
       </form>
     </div>
   );

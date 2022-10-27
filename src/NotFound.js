@@ -4,12 +4,12 @@ import { Message } from "semantic-ui-react";
 const MessageExampleNegative = () => (
   <>
     <p></p>
-    <div class="ui container positive message ">
-      <i class="close icon"></i>
-      <div class="header">This is a beautiful 404 page</div>
+    <div className="ui container positive message ">
+      <i className="close icon"></i>
+      <div className="header">This is a beautiful 404 page</div>
       <p>We welcome you to it</p>
     </div>
-    <div class="ui container negative message ">
+    <div className="ui container negative message ">
       <Message
         error
         header="There was some errors with your submission"

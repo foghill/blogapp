@@ -3,13 +3,12 @@ import {Link} from 'react-router-dom'
 const Navbar = () => {
   return (
     <nav>
-        <h1 class= "ui huge blue header center aligned container">Ben's Flatiron React Project</h1>
+        <h1 className= "ui huge blue header center aligned container">Ben's Flatiron React Project</h1>
         <div className='ui menu'>
-            <Link class="item" to="/">Home</Link>
-            <Link class="item" to="/create">Create Blog</Link>
-            <Link class="item" to="/cat">Cat</Link>
-            <Link class="item" to="/counter">Counter</Link>
-            <Link class="item" to="/404">Beautiful 404</Link>
+            <Link className="item" to="/">Home</Link>
+            <Link className="item" to="/create">Create Blog</Link>
+            <Link className="item" to="/cat">Cat</Link>
+            <Link className="item" to="/counter">Counter</Link>
         </div>
     </nav>
   )
