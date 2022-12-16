@@ -30,8 +30,8 @@ const Create = ({ onAddBlog }) => {
       ...blogObj,
       [e.target.name]: e.target.value,
     });
-    console.log(blogObj);
   };
+  console.log(blogObj);
 
   return (
     <div className="ui form container">
@@ -40,8 +40,8 @@ const Create = ({ onAddBlog }) => {
         <label>Blog Title</label>
         <input
           onChange={onChangeHandler}
-          type="text"
           name="title"
+          type="text"
           required
           value={blogObj.title}
           

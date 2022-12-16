@@ -14,13 +14,13 @@
 
 1. **App.js** - the main component, which uses BrowserRouter to link all the pages, give them paths, and load components to that page
 2. **BlogList.js** - It receives the blogs from the Home component and displays them
-3. **BlogCard.js** - This component fetches a single blog and displays it on a separate page
+3. **BlogPage.js** - This component fetches a single blog and displays it on a separate page
 4. **Create.js** - This is where new blogs are created and adds them to the previous blogs list. This component includes a form controlled component
 5. **Navbar.js** - This displays the navbar on each page
 6. **NotFound.js** - This page loads if the user lands on a page that doesn't exist. It's the 404 page
 7. **useFetch.js** - This is a custom hook that fetches the data from the local JSON server
-8. **Cat.js** - Generate a random cat image from a cat API
-9. **Counter.js**- simple counter app for fun
+<!-- 8. **Cat.js** - Generate a random cat image from a cat API
+9. **Counter.js**- simple counter app for fun -->
 
 ## Styling
 
