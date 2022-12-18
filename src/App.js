@@ -5,6 +5,7 @@ import BlogPage from "./BlogPage";
 import BlogList from "./BlogList";
 import NotFound from "./NotFound";
 import Search from "./Search";
+import About from "./About";
 // import Cat from "./Cat.js";
 // import Counter from "./Counter.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -27,16 +28,16 @@ function App() {
     setBlogs(updatedBlogs);
   }
 
-  console.log(blogs)
+  console.log(blogs);
 
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <Search blogs={blogs} setBlogs={setBlogs} />
         <div className="content">
           <Routes>
             <Route path="/" element={<BlogList blogs={blogs} />} />
+            <Route path="/about" element={<About />} />
             <Route
               path="/create"
               element={<Create onAddBlog={handleAddBlog} blogs={blogs} />}
@@ -48,6 +49,7 @@ function App() {
               }
             />
             <Route path="*" element={<NotFound />} />
+            <Route path="/search" element={<Search blogs={blogs} setBlogs={setBlogs}/>} />
           </Routes>
         </div>
       </div>

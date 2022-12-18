@@ -10,6 +10,11 @@
 3. functionality to add new blogs via RESTful API - POST
 4. deleting blogs via RESTful API - DELETE
 
+## How to run
+
+1. Start the JSON Server with `npx json-server --watch db.json -p8000`
+2. then `npm start`
+
 ## The components include:
 
 1. **App.js** - the main component, which uses BrowserRouter to link all the pages, give them paths, and load components to that page
@@ -19,8 +24,6 @@
 5. **Navbar.js** - This displays the navbar on each page
 6. **NotFound.js** - This page loads if the user lands on a page that doesn't exist. It's the 404 page
 7. **useFetch.js** - This is a custom hook that fetches the data from the local JSON server
-<!-- 8. **Cat.js** - Generate a random cat image from a cat API
-9. **Counter.js**- simple counter app for fun -->
 
 ## Styling
 
